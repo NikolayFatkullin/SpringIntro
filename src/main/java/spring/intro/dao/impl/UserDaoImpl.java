@@ -17,6 +17,7 @@ public class UserDaoImpl implements UserDao {
         this.sessionFactory = sessionFactory;
     }
 
+    @Override
     public void add(User user) {
         Transaction transaction = null;
         Session session = null;
@@ -37,6 +38,7 @@ public class UserDaoImpl implements UserDao {
         }
     }
 
+    @Override
     public List<User> listUsers() {
         try (Session session = sessionFactory.openSession()) {
             return session.createQuery("FROM User", User.class).getResultList();
