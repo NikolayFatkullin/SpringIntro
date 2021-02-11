@@ -1,7 +1,6 @@
 package spring.intro.service;
 
 import java.util.List;
-import java.util.Optional;
 import spring.intro.model.User;
 
 public interface UserService {
@@ -9,5 +8,5 @@ public interface UserService {
 
     List<User> listUsers();
 
-    Optional<User> getById(Long id);
+    User getById(Long id);
 }

@@ -12,6 +12,7 @@ public class UserMapperImpl implements UserMapper {
         UserResponseDto userResponseDto = new UserResponseDto();
         userResponseDto.setEmail(user.getEmail());
         userResponseDto.setName(user.getName());
+        userResponseDto.setId(user.getId());
         return userResponseDto;
     }
 }
